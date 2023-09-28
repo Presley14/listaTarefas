@@ -1,0 +1,19 @@
+.inicio{
+    display: flex;
+    position: absolute;
+    top: 50vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main{
+    position: absolute;
+    top: 25vh;
+    left: 60%;
+    transform: translate(-50%,-50%);
+}
+
+.main p{
+    display: flex;
+    justify-content: center;
+}

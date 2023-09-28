@@ -1,0 +1,29 @@
+.sidebar{
+    background-color: rgb(3, 43, 130);
+    width: 250px;
+    height: 70vh;
+    position: absolute;
+    padding-top: 50px;
+    
+}
+
+.link{
+    text-decoration: none;
+    list-style: none;
+    padding: 10px 0px 10px 20px;
+    color: aliceblue;
+}
+
+.link:hover{
+    background-color: rgb(33, 75, 133);
+}
+
+.hr{
+    display: flex;
+}
+hr{
+    display: flex;
+    margin: auto;
+    left: auto;
+    width: 70%;
+}
