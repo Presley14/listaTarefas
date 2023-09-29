@@ -1,8 +1,9 @@
 import express from "express"
 import cors from "cors"
 import connection from "./model/db.js"
-import Categoria from "./controller/controllerCategoria/categoria/categoria.js"
-import Tarefa from "./controller/controllerTarefa/tarefas/tarefas.js"
+import router from "./route/routes.js"
+import Categoria from "./controller/categoria/categoria.js"
+import Tarefa from "./controller/tarefa/tarefas.js"
 
 const app = express()
 
@@ -18,9 +19,11 @@ connection
     .then(() => {
         console.log("Modelos conctados com o banco de dados.")
     })
-    .catch((error)=>{
-        console.log(error)
+    .catch((erro)=>{
+        console.log(erro)
     })
+
+    app.use("/", router)
 
 const PORTA = 5000
 app.listen( PORTA, () => {

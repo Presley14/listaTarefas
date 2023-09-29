@@ -1,6 +1,6 @@
 import { Sequelize } from "sequelize"
-import connection from "../../../model/db.js"
-import Categoria from "../../controllerCategoria/categoria/categoria.js"
+import connection from "../../model/db.js"
+import Categoria from "../../controller/categoria/categoria.js"
 
 const Tarefa = connection.define("tarefas", {
     titulo: {

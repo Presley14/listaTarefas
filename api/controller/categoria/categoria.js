@@ -1,8 +1,8 @@
 import { Sequelize } from "sequelize";
-import connection from "../../../model/db.js";
+import connection from "../../model/db.js";
 
 const Categoria = connection.define("categorias", {
-    nome: {
+    name: {
         type: Sequelize.STRING,
         allowNull: false
     }

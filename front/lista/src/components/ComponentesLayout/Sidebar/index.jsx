@@ -10,7 +10,7 @@ function Sidebar() {
             </div>
             <ul>
                 <li className={styles.link}>Tarefas</li>
-                <li className={styles.link}>Categorias</li>
+                <Link to="/lista/categoria"><li className={styles.link}>Categorias</li></Link>
             </ul>
             <div className={styles.hr}>
                <br /><hr /><br /> 
