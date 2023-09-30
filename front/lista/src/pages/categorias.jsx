@@ -1,13 +1,13 @@
 import axios from "axios"
-import { useEffect, useState } from "react"
 import Sidebar from "../components/ComponentesLayout/Sidebar"
 import Main from "../components/ComponentesLayout/Main"
 import Footer from "../components/ComponentesLayout/Footer"
+import ListaCategoria from "../components/ComponentesFuncionais/ListaCategoria/listaCategoria"
 import styles from "../styles/ListaCategoria.module.css"
-import DeletarCategoria from "../components/ComponentesFuncionais/DeletarCategoria"
+import { useState, useEffect } from "react"
 
 
-function ListaCategoria() {
+function Categorias() {
 
     const [ listaCategoria, setListaCategoria ] = useState([])
 
@@ -29,20 +29,7 @@ function ListaCategoria() {
             <div className={styles.lista}>
                 <Sidebar />
                 <Main>
-                    <div>
-                        
-                        {listaCategoria.map((item) => (
-                                <div key={item.id}>
-                                    
-                                    <DeletarCategoria
-                                    id={item.id}
-                                    nome={item.name}
-                                    setListaCategoria={setListaCategoria} />
-                                    
-                                </div>
-                            ))
-                        }
-                    </div>
+                    <ListaCategoria />
                 </Main>
             </div>
             <div>
@@ -52,4 +39,4 @@ function ListaCategoria() {
     )
 }
 
-export default ListaCategoria
+export default Categorias

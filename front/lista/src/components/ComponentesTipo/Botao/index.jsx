@@ -1,9 +1,9 @@
-
+import styles from "./Botao.module.css"
 
 
 function Botao({ texto, tipo, aoClicar }) {
     return(
-        <button type={tipo} onClick={aoClicar}>
+        <button className={styles.botao} type={tipo} onClick={aoClicar}>
             {texto}
         </button>
     )

@@ -9,7 +9,8 @@ function Sidebar() {
                <br /><hr /><br /> 
             </div>
             <ul>
-                <li className={styles.link}>Tarefas</li>
+                
+                <Link to="/lista/tarefa"><li className={styles.link}>Tarefas</li></Link>
                 <Link to="/lista/categoria"><li className={styles.link}>Categorias</li></Link>
             </ul>
             <div className={styles.hr}>
@@ -17,7 +18,7 @@ function Sidebar() {
             </div>
             <ul>
                 <Link to="/criar/categoria"><li className={styles.link}>Criar Categoria</li></Link>
-                <li className={styles.link}>Criar Tarefa</li> 
+                <Link to="/criar/tarefa"><li className={styles.link}>Criar Tarefa</li> </Link>
             </ul>
         </div>
     )
