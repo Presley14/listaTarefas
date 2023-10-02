@@ -1,3 +1,4 @@
+/*
 import { useEffect, useState } from "react"
 import DeletarTarefa from "../DeletarTarefa"
 import axios from "axios"
@@ -49,3 +50,4 @@ function ListaTarefa() {
 }
 
 export default ListaTarefa
+*/

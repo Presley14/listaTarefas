@@ -3,7 +3,7 @@ import Botao from "../../ComponentesTipo/Botao"
 
 
 
-function DeletarTarefa({ id, titulo, setListaTarefa }) {
+function DeletarTarefa({ id, titulo, setListaTarefa, conteudo }) {
 
     const filtro = (lista) => lista.id !== id
 
@@ -21,6 +21,7 @@ function DeletarTarefa({ id, titulo, setListaTarefa }) {
         return(
             <div>
                 <h3>{titulo}</h3>
+                <p>{conteudo}</p>
                 <div>
                     <Botao texto="Excluir" aoClicar={deletarTarefa}/>
                 </div>
