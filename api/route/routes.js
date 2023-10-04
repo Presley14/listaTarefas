@@ -19,6 +19,6 @@ router.post("/criar/tarefa", registrarTarefa)
 router.get("/buscar/tarefa", buscarTarefa)
 router.delete("/deletar/tarefa/:id", deletarTarefa)
 router.get("/buscar/tarefa/:categoriaId", buscarTarefa)
-router.put("/completa/:indiceTarefa", completa)
+router.put("/completa/:id", completa)
 
 export default router

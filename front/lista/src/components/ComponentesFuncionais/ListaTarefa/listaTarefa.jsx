@@ -20,27 +20,11 @@ function ListaTarefa() {
         buscarTarefa()
     }, [])
 
-    const completarTarefa = async (indiceTarefa) => {
-        try {
-            const response = await axios.put(`http://localhost:5000/completa/${indiceTarefa}`);
-            if (response.status === 200) {
-                setListaTarefa(prevLista => prevLista.map((item) => {
-                    if (item.id === indiceTarefa) {
-                        return { ...item, completa: true }; // Adiciona um novo campo 'completa' no objeto
-                    }
-                    return item;
-                }));
-            }
-        } catch (error) {
-            console.error(error);
-        }
-    }
     
     return(
         <div>
             <div>
-                {
-                    listaTarefa.map((item) => (
+                {listaTarefa.map((item) => (
                         <div key={item.id}>
                             <div >
                                 <div>
@@ -48,20 +32,13 @@ function ListaTarefa() {
                                         setListaTarefa={setListaTarefa}
                                         titulo={item.titulo}
                                         id={item.id}
+                                        conteudo={item.conteudo}
                                         completa={item.completa}
                                     />
                                 </div>
+                                
                             </div>
-                            <button
-                                onClick={() => completarTarefa(item.id)}
-                                className={item.completa ? styles.completada : ""}
-                            >
-                                {item.titulo}
-                            </button>
-
                         </div>
-                        
-                    
                     ))
                 }
             </div>

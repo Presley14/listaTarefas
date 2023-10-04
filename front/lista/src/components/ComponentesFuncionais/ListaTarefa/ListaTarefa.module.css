@@ -1,5 +1,6 @@
-.linhaCompleta {
-  text-decoration: line-through;
+.completada {
+  text-decoration: line-through; /* Isso adicionará uma linha no texto */
 }
+
 
   
