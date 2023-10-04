@@ -10,6 +10,10 @@ const Tarefa = connection.define("tarefas", {
     conteudo: {
         type: Sequelize.STRING,
         allowNull: false,
+    }, 
+    completa: {
+        type: Sequelize.BOOLEAN,
+        allowNull: false,
     }
 })
 

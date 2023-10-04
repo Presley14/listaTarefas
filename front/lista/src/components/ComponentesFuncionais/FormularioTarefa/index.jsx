@@ -30,6 +30,7 @@ function FormularioTarefa({ setListaTarefa }) {
             {
                 titulo,
                 conteudo,
+                completa: false,
                 categoriaId: categoriaSelecionada, // Adiciona a categoria selecionada à requisição
             },
             {

@@ -1,10 +1,10 @@
 import Tarefa from "../tarefas.js"
 
 export const registrarTarefa = async ( req, res ) => {
-    const { titulo, conteudo, categoriaId } = req.body
+    const { titulo, conteudo, completa, categoriaId } = req.body
 
     try{
-        const novatarefa = await Tarefa.create({ titulo, conteudo, categoriaId})
+        const novatarefa = await Tarefa.create({ titulo, conteudo, completa, categoriaId})
         res.status(200).json(novatarefa)
     } catch(error) {
         console.error(error)

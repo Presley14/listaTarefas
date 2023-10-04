@@ -5,6 +5,7 @@ import Footer from "../components/ComponentesLayout/Footer"
 import { useState, useEffect } from "react"
 import styles from "../styles/ListaTarefa.module.css"
 import DeletarTarefa from "../components/ComponentesFuncionais/DeletarTarefa/index"
+import ListaTarefa from "../components/ComponentesFuncionais/ListaTarefa/listaTarefa"
 
 function Tarefas() {
     const [ listaTarefa, setListaTarefa ] = useState([])
@@ -25,19 +26,7 @@ function Tarefas() {
             <div className={styles.lista}>
                 <Sidebar />
                 <Main>
-                    {
-                        listaTarefa.map((item) => (
-                            <div key={item.id}>
-                                <DeletarTarefa 
-                                    setListaTarefa={setListaTarefa}
-                                    titulo={item.titulo}
-                                    conteudo={item.conteudo}
-                                    id={item.id}
-                                />
-                            </div>
-                            
-                        ))
-                    }
+                    <ListaTarefa />
                 </Main>
             </div>
             <div>
