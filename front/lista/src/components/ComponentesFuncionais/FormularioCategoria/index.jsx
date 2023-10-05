@@ -1,7 +1,9 @@
 import { useState } from "react"
 import axios from "axios"
 import Botao from "../../ComponentesTipo/Botao"
-
+import Titulo from "../../ComponentesTipo/Titulo"
+import Input from "../../ComponentesTipo/Input"
+import styles from "./FormularioCategoria.module.css"
 
 function FormularioCategoria({ setListaCategoria }) {
 
@@ -34,17 +36,25 @@ function FormularioCategoria({ setListaCategoria }) {
         }
     }
     return(
-        <form onSubmit={cadastrarCategoria}>
-            <input 
-            type="text"
-            name="name"
-            value={valores.name}
-            onChange={mudarValor}
-            required
-            placeholder="Digite o nome da categoria."
-            />
-            <Botao tipo="submit" texto="Cadastar"></Botao>
-        </form>
+        <div>
+            <Titulo titulo="Crie uma nova categoria" />
+            <form className={styles.form} onSubmit={cadastrarCategoria}>
+                    <div>
+                        <label htmlFor="name">Categoria:</label>
+                    </div>
+                    <Input 
+                        type="text"
+                        name="name"
+                        value={valores.name}
+                        onChange={mudarValor}
+                        required
+                        placeholder="Digite o nome da categoria."
+                    />
+                    <Botao tipo="submit" texto="Cadastar"></Botao>
+            </form>
+        </div>
+        
+        
     )
 }
 

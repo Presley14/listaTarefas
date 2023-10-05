@@ -1,5 +1,6 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
+import styles from "./TarefasCategoria.module.css"
 
 
 function TarefasCategoria({ categoriaId }) {
@@ -22,15 +23,18 @@ function TarefasCategoria({ categoriaId }) {
     
     return(
         <div>
-            {
-                listaCategoriaId.map(( item )=>(
-                    <div key={ item.id }>
-                        <h3>{ item.titulo }</h3>
-                        <p>{ item.conteudo }</p>
-                    </div>
-                ))
-            }
+           <div className={styles.categorias}>
+                {
+                    listaCategoriaId.map(( item )=>(
+                        <div className={styles.card} key={ item.id }>
+                            <h3 className={styles.titulo}>{ item.titulo }</h3>
+                            <p className={styles.conteudo}>{ item.conteudo }</p>
+                        </div>
+                    ))
+                }
+            </div> 
         </div>
+        
     )
 }
 

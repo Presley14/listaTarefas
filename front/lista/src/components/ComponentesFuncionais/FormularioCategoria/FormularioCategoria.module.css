@@ -1,0 +1,14 @@
+.form{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.form label{
+    margin-right: 5px;
+    font-size: 17px;
+}
+
+.caixaBtn{
+    display: flex;
+}

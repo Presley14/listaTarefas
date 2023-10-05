@@ -1,0 +1,25 @@
+.caixaBtn{
+    display: flex;
+}
+
+.titulo{
+    background-color: rgb(60, 108, 212);
+    padding: 10px;
+    width: 400px;
+}
+
+.conteudo{
+    background-color: aliceblue;
+    color: rgb(19, 23, 67);
+    padding: 20px;
+    border-radius: 0 0 5px 5px;
+    width: 400px;
+}
+
+.caixa{
+    display: flex;
+}
+
+.data{
+    margin-bottom:  20px;
+}

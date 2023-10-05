@@ -1,8 +1,8 @@
 .footer{
-    color: aliceblue;
+    color: rgb(8, 21, 46);
     display: flex;
     justify-content: center;
-    background-color: rgb(3, 43, 130);
+    background-color: rgb(171, 180, 199);
     position: fixed;
     bottom: 0;
     width: 100%;

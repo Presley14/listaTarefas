@@ -1,0 +1,9 @@
+.caixa{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nome{
+    margin-right: 100px;
+    display: flex;
+}

@@ -11,7 +11,7 @@ function Inicio() {
                 <Sidebar />
                 <Main >
                     <div className={styles.main}>
-                    <h2>Seja bem-vindo.</h2>
+                        <h2>Seja bem-vindo.</h2>
                         <p>Crie suas tarefas.</p> 
                     </div>
                 </Main>

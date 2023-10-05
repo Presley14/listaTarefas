@@ -1,7 +1,7 @@
 .categoria{
     display: flex;
     position: absolute;
-    top: 50vh;
+    top: 45vh;
     left: 50%;
     transform: translate(-50%, -50%);
 }

@@ -1,6 +1,6 @@
 import Botao from "../../ComponentesTipo/Botao"
 import axios from "axios"
-
+import styles from "./DeletarCategoria.module.css"
 
 
 
@@ -19,9 +19,14 @@ function DeletarCategoria({ nome, id, setListaCategoria }) {
     }
 
     return(
-        <div>
-            <h3>{nome}</h3>
-            <Botao aoClicar={btnDeletar} texto="Excluir"/>
+        <div className={styles.caixa}>
+            <div>
+               <h3 className={styles.nome}>{nome}</h3> 
+            </div>
+            <div>
+               <Botao aoClicar={btnDeletar} texto="Excluir"/> 
+            </div>
+            
         </div>
     )
 }

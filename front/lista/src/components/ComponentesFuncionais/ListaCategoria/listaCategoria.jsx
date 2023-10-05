@@ -2,7 +2,8 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 import DeletarCategoria from "../DeletarCategoria"
 import TarefasCategoria from "../TarefasCategoria"
-
+import Titulo from "../../ComponentesTipo/Titulo/index"
+import styles from "./ListaCategoria.module.css"
 
 function ListaCategoria() {
 
@@ -37,19 +38,25 @@ function ListaCategoria() {
     
     return(
         <div>
-            <div>
+            <Titulo titulo="Lista de categorias"/>
+            <div className={styles.caixa}>
                 {listaCategoria.map((item) => (
-                    <div key={item.id}>
-                        <div>
-                            <DeletarCategoria
-                            id={item.id}
-                            nome={item.name}
-                            setListaCategoria={setListaCategoria} />
+                    <div >
+                        <div className={styles.centralizar} key={item.id}>
+                            <div className={styles.card}>
+                                <DeletarCategoria
+                                    id={item.id}
+                                    nome={item.name}
+                                    setListaCategoria={setListaCategoria} 
+                                />
+                            </div>
+                            <div>
+                                <button className={styles.visualizar} onClick={ () => visualizarTarefas( item.id )}>
+                                    {categoriaSelecionada === item.id && mostrarConteudo ? "Ocultar" : "Visualizar"}
+                                </button> 
+                            </div>
                         </div>
-                        <button onClick={ () => visualizarTarefas( item.id )}>
-                            {categoriaSelecionada === item.id && mostrarConteudo ? "Ocultar" : "Visualizar"}
-                        </button>
-                        <div>
+                        <div className={styles.tarefas}>
                             {categoriaSelecionada === item.id && (
                                 <TarefasCategoria categoriaId={categoriaSelecionada}/>
                             )}  

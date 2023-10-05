@@ -1,0 +1,10 @@
+.titulo{
+    color: aliceblue;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.caixaTitulo{
+    display: flex;
+    justify-content: center;
+}

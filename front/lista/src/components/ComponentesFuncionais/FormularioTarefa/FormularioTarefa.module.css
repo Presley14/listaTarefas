@@ -1,0 +1,40 @@
+.form{
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.caixaInput{
+    margin-bottom: 20px;
+}
+
+.caixaTextArea{
+    margin-bottom: 20px;
+}
+
+.form label{
+    margin-right: 5px;
+    font-size: 17px;
+}
+
+.centralizar{
+    display: flex;
+    justify-content: center;
+}
+
+.selecao{
+    display: flex;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    border: none;
+    width: 300px;
+}
+
+.alinhar{
+    display: flex;
+}
+
+.area{
+    padding-left: 20px;
+    padding-top: 10px;
+}
