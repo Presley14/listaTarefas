@@ -27,3 +27,8 @@
     background-color: rgb(18, 217, 41);
     margin-left: 10px;
 }
+
+.visualizar:hover{
+    cursor: pointer;
+    background-color: rgb(15, 129, 28);
+}

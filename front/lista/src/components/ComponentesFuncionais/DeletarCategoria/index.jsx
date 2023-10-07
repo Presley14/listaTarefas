@@ -7,7 +7,7 @@ import styles from "./DeletarCategoria.module.css"
 function DeletarCategoria({ nome, id, setListaCategoria }) {
 
     const filtro = (indice) => indice.id !== id
-
+    
     const btnDeletar = async () => {
         try{
             const response = await axios.delete(`http://localhost:5000/deletar/categoria/${id}`)
