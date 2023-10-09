@@ -1,9 +1,9 @@
-
 import { useEffect, useState } from "react"
 import DeletarTarefa from "../DeletarTarefa"
 import axios from "axios"
 import Titulo from "../../ComponentesTipo/Titulo/index"
 import styles from "./ListaTarefa.module.css"
+import AtualizarTarefa from "../AtualizarTarefa"
 
 function ListaTarefa() {
 
@@ -21,6 +21,7 @@ function ListaTarefa() {
         buscarTarefa()
     }, [])
 
+    
     
     return(
         <div>
@@ -40,13 +41,22 @@ function ListaTarefa() {
                                         ultimaAtualizacao={item.updatedAt}
                                     />
                                 </div>
+                                <div>
+                                    <AtualizarTarefa 
+                                    setListaTarefa={setListaTarefa}
+                                    titulo={item.titulo}
+                                    id={item.id}
+                                    conteudo={item.conteudo}
+                                    completa={item.completa}
+                                    ultimaAtualizacao={item.updatedAt}
+                                    />
+                                </div>
                             </div>
                         </div>
                     ))
                 }
-            </div> 
+                </div>
             </div>
-            
         </div>
     )
 }

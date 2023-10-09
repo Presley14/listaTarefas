@@ -6,6 +6,8 @@ import { registrarTarefa } from "../controller/tarefa/controllerTarefa/controlle
 import { buscarTarefa } from "../controller/tarefa/controllerTarefa/controllerBuscar.js"
 import { deletarTarefa } from "../controller/tarefa/controllerTarefa/controllerDelete.js"
 import { completa } from "../controller/tarefa/controllerTarefa/controllerCompletar.js"
+import { atualizarTarefa } from "../controller/tarefa/controllerTarefa/controllerAtualizar.js";
+
 
 
 const router = express.Router()
@@ -20,5 +22,6 @@ router.get("/buscar/tarefa", buscarTarefa)
 router.delete("/deletar/tarefa/:id", deletarTarefa)
 router.get("/buscar/tarefa/:categoriaId", buscarTarefa)
 router.put("/completa/:id", completa)
+router.put("/atualizar/tarefa/:id", atualizarTarefa);
 
 export default router
