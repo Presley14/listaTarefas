@@ -8,6 +8,7 @@ import AtualizarTarefa from "../AtualizarTarefa"
 function ListaTarefa() {
 
     const [ listaTarefa, setListaTarefa ] = useState([])
+    const [exibirAtualizar, setExibirAtualizar] = useState([])
 
     useEffect(() => {
         const buscarTarefa = async () => {
@@ -22,15 +23,41 @@ function ListaTarefa() {
     }, [])
 
     
-    
+    const alternarExibirAtualizar = (index) => {
+        setExibirAtualizar(prevState => {
+            const newState = [...prevState];
+            newState[index] = !newState[index];
+            return newState;
+        });
+    }
+
+
     return(
         <div>
             <Titulo titulo="Lista de tarefas"/>
             <div className={styles.caixa}>
                <div className={styles.card}>
-                {listaTarefa.map((item) => (
+                {listaTarefa.slice().reverse().map((item, index) => (
                         <div key={item.id}>
-                            <div >
+                            <div>
+                                <div className={styles.atualizar}>
+                                <br /><hr /><br />
+                                    <button className={styles.btnatualizar} onClick={() => alternarExibirAtualizar(index)}>
+                                    {exibirAtualizar[index]  ? "Sair" : "Atualizar"}
+                                    </button>
+                                    {exibirAtualizar[index] && (
+                                    <div>
+                                        <AtualizarTarefa 
+                                        setListaTarefa={setListaTarefa}
+                                        titulo={item.titulo}
+                                        id={item.id}
+                                        conteudo={item.conteudo}
+                                        completa={item.completa}
+                                        ultimaAtualizacao={item.updatedAt}
+                                        />
+                                    </div>
+                                    )}
+                                </div>
                                 <div>
                                     <DeletarTarefa 
                                         setListaTarefa={setListaTarefa}
@@ -39,16 +66,6 @@ function ListaTarefa() {
                                         conteudo={item.conteudo}
                                         completa={item.completa}
                                         ultimaAtualizacao={item.updatedAt}
-                                    />
-                                </div>
-                                <div>
-                                    <AtualizarTarefa 
-                                    setListaTarefa={setListaTarefa}
-                                    titulo={item.titulo}
-                                    id={item.id}
-                                    conteudo={item.conteudo}
-                                    completa={item.completa}
-                                    ultimaAtualizacao={item.updatedAt}
                                     />
                                 </div>
                             </div>

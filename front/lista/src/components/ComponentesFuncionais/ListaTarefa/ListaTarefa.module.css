@@ -2,3 +2,15 @@
   margin-left: 50px;
   
 }
+
+.btnatualizar{
+  padding: 5px 10px 5px 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(18, 217, 41);
+  margin-left: 10px;
+}
+
+.atualizar{
+  margin-bottom: 10px;
+}

@@ -1,0 +1,19 @@
+.linha{
+    display: flex;
+}
+
+.btn_input{
+    margin: 10px 0;
+    display: flex;
+}
+
+.caixa{
+    background-color: rgb(171, 180, 199);
+    padding: 10px;
+    width: 400px;
+    margin-top: 10px;
+}
+
+.titulo{
+    margin-top: 10px;
+}

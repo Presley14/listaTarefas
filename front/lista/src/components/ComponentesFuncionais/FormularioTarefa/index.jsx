@@ -94,7 +94,7 @@ function FormularioTarefa({ setListaTarefa }) {
                         </div>
                         <textarea 
                             className={styles.area}
-                            name="conteudo" 
+                            name="conteudo"
                             cols="60" 
                             rows="5"
                             value={conteudo}

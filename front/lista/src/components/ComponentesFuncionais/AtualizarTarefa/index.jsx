@@ -1,5 +1,8 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React, { useState } from "react";
+import axios from "axios"
+import Input from "../../ComponentesTipo/Input/index"
+import Botao from "../../ComponentesTipo/Botao"
+import styles from "./AtualizarTarefa.module.css"
 
 function AtualizarTarefa({ id, titulo, setListaTarefa, conteudo, completa }) {
 
@@ -27,20 +30,33 @@ function AtualizarTarefa({ id, titulo, setListaTarefa, conteudo, completa }) {
   };
 
   return (
-    <div>
-      <input
-        type="text"
-        value={novoTitulo}
-        onChange={(e) => setNovoTitulo(e.target.value)}
-      />
-      <input
-        type="text"
-        value={novoConteudo}
-        onChange={(e) => setNovoConteudo(e.target.value)}
-      />
-      <button onClick={atualizarTarefa}>Atualizar Tarefa</button>
+    <div className={styles.caixa}>
+        <div className={styles.titulo}>
+          <Input 
+          type="text"
+          value={novoTitulo}
+          onChange={(e) => setNovoTitulo(e.target.value)}
+        />
+        </div>
+        <div className={styles.btn_input}>
+            <div className={styles.conteudo}>
+              <textarea
+                name="conteudo"
+                cols="50"
+                rows="5"
+                value={novoConteudo}
+                onChange={(e) => setNovoConteudo(e.target.value)}>
+              </textarea>
+              <div className={styles.btn}>
+                <Botao
+                  aoClicar={atualizarTarefa}
+                  texto="Concluir"
+                />
+              </div>
+            </div>
+        </div>
     </div>
-  );
+  )
 }
 
 export default AtualizarTarefa;

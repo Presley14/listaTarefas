@@ -25,7 +25,7 @@ connection
 
     app.use("/", router)
 
-const PORTA = 5000
-app.listen( PORTA, () => {
-   console.log(`O servidor está rodando na porta: ${PORTA}`) 
+const port = process.env.PORT || 5000
+app.listen( port, () => {
+   console.log(`O servidor está rodando na porta: ${port}`) 
 })
